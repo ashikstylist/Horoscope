@@ -43,7 +43,32 @@
 
 
 
+<script>
+ function data(){
 
+       $(document).ready( function() {
+       var city = document.getElementById('city').value;
+
+ var display = $("#output")
+
+              const URL = "https://aztro.sameerkumar.website/?sign="+sign+"&day=today";
+              fetch(URL, {
+                  method: 'POST'
+              })
+.then(response => response.json())
+              .then(json => {
+                  const description = json.description;
+                  display.empty();
+                  display.append("<h5 style='text-align:center;margin-top:15px;'><i class='fa fa-quote-left' style='font-size:26px;color:tomato;'></i><b style='padding-left:10px;'><br>"+description+"</b></h5>");
+              });
+
+       }); 
+
+  }
+
+
+
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>    
 </body>
 </html>
