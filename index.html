@@ -21,7 +21,7 @@
       <br>
 	  <h3 style="text-align: center;color: #222;">Horoscope</h3>
       <div class="card-body mt-1 mb-3" style="background-color: white;max-width: 25rem;position:relative;margin:auto;top:10vh;left:0;bottom:0;right:0; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-      <select class="form-control form-control-lg" id="sign" required>
+      <select class="form-control form-control-lg"  required>
        <option value="" selected="true" disabled="disabled" >Select Zodiac Sign</option>
           <option value="aries">Aries</option>
           <option value="taurus">Tauras</option>
@@ -62,7 +62,6 @@
        $(document).ready( function() {
        var city = document.getElementById('city').value;
 
- var display = $("#output")
 
               const URL = "https://aztro.sameerkumar.website/?sign="+sign+"&day=today";
               fetch(URL, {
