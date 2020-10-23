@@ -60,7 +60,14 @@
  function data(){
 
        $(document).ready( function() {
-       var city = document.getElementById('city').value;
+       var sign = document.getElementById('sign').value;
+
+       if(sign == ""){
+         
+         alert("Select your zodiac sign");
+    
+    }
+    else{
 
 	  var display = $("#output")
               const URL = "https://aztro.sameerkumar.website/?sign="+sign+"&day=today";
@@ -76,7 +83,10 @@
 
               });
 
+        }
+
        }); 
+
 
   }
 
